@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRx-jM-LIE">
+                                <rect key="frame" x="0.0" y="766" width="390" height="44"/>
+                                <items>
+                                    <barButtonItem title="Good" id="2hg-Ot-e4k">
+                                        <connections>
+                                            <action selector="toQuestionView:" destination="BYZ-38-t0r" id="muy-kN-9GH"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pXx-dp-ybw"/>
+                                    <barButtonItem tag="1" title="Pun" id="xam-rV-X9A">
+                                        <connections>
+                                            <action selector="toQuestionView:" destination="BYZ-38-t0r" id="ZcJ-cS-5gr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Ge2-J1-fhA"/>
+                                    <barButtonItem tag="2" title="Dad" id="zKc-Ny-Yxi">
+                                        <connections>
+                                            <action selector="toQuestionView:" destination="BYZ-38-t0r" id="rfh-lf-GK2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aRx-jM-LIE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3qp-OJ-lL0"/>
+                            <constraint firstAttribute="trailing" secondItem="aRx-jM-LIE" secondAttribute="trailing" id="8hq-JW-wof"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aRx-jM-LIE" secondAttribute="bottom" id="ovJ-A6-Xeg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="66"/>
+        </scene>
+        <!--Question View-->
+        <scene sceneID="VFR-9u-gnL">
+            <objects>
+                <viewController storyboardIdentifier="QuestionView" id="LdH-a5-Ldp" customClass="QuestionView" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dds-kU-wke">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zc3-4T-PEU">
+                                <rect key="frame" x="174.33333333333334" y="412" width="41.333333333333343" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1j4-cd-csX">
+                                <rect key="frame" x="320" y="715" width="54" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Next"/>
+                                <connections>
+                                    <action selector="next:" destination="LdH-a5-Ldp" eventType="touchUpInside" id="3EI-L3-A6q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fkl-fu-NeR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zc3-4T-PEU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fkl-fu-NeR" secondAttribute="leading" id="5Jw-FC-lhL"/>
+                            <constraint firstItem="fkl-fu-NeR" firstAttribute="bottom" secondItem="1j4-cd-csX" secondAttribute="bottom" constant="64" id="6ED-Kq-mdu"/>
+                            <constraint firstItem="1j4-cd-csX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fkl-fu-NeR" secondAttribute="leading" symbolic="YES" id="9Nl-Zl-REJ"/>
+                            <constraint firstItem="fkl-fu-NeR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zc3-4T-PEU" secondAttribute="trailing" id="cmp-UM-HiC"/>
+                            <constraint firstItem="zc3-4T-PEU" firstAttribute="centerY" secondItem="dds-kU-wke" secondAttribute="centerY" id="kbf-gI-wb7"/>
+                            <constraint firstItem="zc3-4T-PEU" firstAttribute="centerX" secondItem="dds-kU-wke" secondAttribute="centerX" id="mHy-io-LmY"/>
+                            <constraint firstItem="fkl-fu-NeR" firstAttribute="trailing" secondItem="1j4-cd-csX" secondAttribute="trailing" constant="16" id="t0B-pu-xeH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="zc3-4T-PEU" id="2AM-Ag-XfD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u38-b8-PZz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="-312.05357142857139"/>
+        </scene>
+        <!--Punchline View-->
+        <scene sceneID="twI-Bk-JTZ">
+            <objects>
+                <viewController storyboardIdentifier="PunchlineView" id="b1g-Dm-s3M" customClass="PunchlineView" customModule="iKid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KFB-l3-lxv">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeX-2k-E35">
+                                <rect key="frame" x="16" y="412" width="358" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oQZ-E7-PS9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aeX-2k-E35" firstAttribute="leading" secondItem="oQZ-E7-PS9" secondAttribute="leading" constant="16" id="NFT-LU-97S"/>
+                            <constraint firstItem="oQZ-E7-PS9" firstAttribute="trailing" secondItem="aeX-2k-E35" secondAttribute="trailing" constant="16" id="VhE-Tj-cEy"/>
+                            <constraint firstItem="aeX-2k-E35" firstAttribute="centerY" secondItem="KFB-l3-lxv" secondAttribute="centerY" id="Y9U-rk-ioY"/>
+                            <constraint firstItem="aeX-2k-E35" firstAttribute="centerX" secondItem="KFB-l3-lxv" secondAttribute="centerX" id="jPp-OE-X1J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="punchlineLabel" destination="aeX-2k-E35" id="Gco-va-auo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15Y-jM-345" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
